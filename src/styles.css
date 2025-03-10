@@ -1,0 +1,29 @@
+/* Reset default margin and padding on html and body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the height is 100% for the entire page */
+}
+
+/* General transition for background */
+.dashboard-container {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.5s ease-in-out; /* Add transition */
+}
+
+/* Gradient backgrounds based on time of day */
+.dashboard-container.morning {
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f); /* Sunrise */
+}
+
+.dashboard-container.afternoon {
+  background: linear-gradient(to bottom, #a0c4ff, #b9e6ff); /* Blue sky */
+}
+
+.dashboard-container.evening {
+  background: linear-gradient(to bottom, #b7a0d1, #ffb3b3); /* Dusk */
+}
